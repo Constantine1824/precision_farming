@@ -1,7 +1,9 @@
 from rest_framework import serializers
 
 class DataSerializer(serializers.Serializer):
-    pH = serializers.FloatField()
-    water_level = serializers.CharField()
-    soil_type = serializers.CharField()
-    location = serializers.CharField()
+    temperature = serializers.FloatField()
+    humidity = serializers.FloatField()
+    ph = serializers.FloatField()
+    water_level = serializers.FloatField()
+    crop = serializers.CharField()
+    country = serializers.CharField()
