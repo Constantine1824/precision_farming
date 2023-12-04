@@ -5,6 +5,18 @@ from rest_framework import status
 from .serializers import DataSerializer
 import predict
 
+
+class HealthStatusAPIView(APIView):
+
+    def get(self, request):
+        return Response(
+            {
+                "status" : "ok"
+            },
+            status=200
+        )
+    
+
 class PrecisionAPIView(APIView):
     """
     API view class for handling prediction data.
